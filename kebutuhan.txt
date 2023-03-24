@@ -1,0 +1,66 @@
+1.Customer membuat ID transaksi customer berikut
+Dengan membuat objek dari function : trnsct_123 = transaction()-> fungsi
+
+2. Kemudian, Customer memasukkan nama item, jumlah item, dan harga barang.
+Masukkan item yang ingin dibeli.
+add_item([<nama item>, <jumlah item>, <harga per item>])-> fungsi
+
+3. Jika ternyata ada kesalahan dalam memasukkan nama item atau jumlah item atau harga item tetapi tidak ingin menghapus itemnya, Customer bisa melakukan
+Update nama item dengan method: 
+update_item_name(<nama item>, <update nama item>)-> fungsi
+Update jumlah item dengan method: 
+update_item_qty(<nama_item>, <update jumlah item>)-> fungsi
+Update harga item menggunakan method: 
+update_item_price(<nama_item>, <update harga item>)-> fungsi
+
+4. Jika batal membeli item belanjaan, Customer bisa melakukan
+Menghapus salah satu item dari nama item dengan method 
+delete_item(<nama item>) -> fungsi
+=========================================================
+ITEM        | JUMLAH_ITEM  | HARGA_SATUAN | HARGA_TOTAL |
+--------------------------------------------------------
+mobil       | 2            | 100000       | 200000      |
+(data hapus)| Null         | Null         | Null        |
+tempe       | 3            | 3000         | 9000        |
+            |              |              |             |
+Ketika menghapus salah satu nama item, maka jumlah item dan harga per item pada baris/list tersebut akan ikut terhapus
+Langsung menghapus semua transaksi atau reset transaksi dengan method
+reset_transaction() -> fungsi
+
+5.Bisa saja Customer melakukan kesalahan dalam melakukan input, 
+semisal sudah melakukan input harga barang tetapi lupa untuk input nama barangnya. Andi bisa menggunakan method check_order()-> fungsi. 
+Terdapat ketentuan:
+Akan mengeluarkan pesan “Pemesanan sudah benar” (bebas bisa dengan message yang lain) jika tidak ada kesalahan input 
+Akan mengeluarkan pesan “Terdapat kesalahan input data” jika terjadi kesalahan input
+Keluarkan output transaksi atau pemesanan apa saja yang sudah dibeli.
+Contoh Output: 
+| No | Nama Item | Jumlah Item | Harga/Item | Total Harga |
+|----|-----------|-------------|------------|-------------|
+| 1  | Mobil     | 2           | 100000     | 200000      |
+| 2  | Mie       | 1           | 5000       | 5000        |
+| 3  | Tempe     | 3           | 3000       | 9000        |
+
+6. Setelah melakukan pengecekan, Customer bisa menghitung total belanja yang sudah dibeli. 
+Andi bisa menggunakan method check_out()-> fungsi. 
+Pada supermarket ini ternyata terdapat ketentuan:
+Jika total harga per item Andi diatas Rp 200.000 maka akan mendapatkan diskon 5%
+Jika total harga per item Andi diatas Rp 300.000 maka akan mendapatkan diskon 6%
+Jika total harga per item Andi diatas Rp 500.000 maka akan mendapatkan diskon 7%
+Total pembelian hanya ditampilkan pada method check_out(), namun tidak di simpan di dalam database
+
+7. Setiap kali method check_out()->fungsi dijalankan, 
+data transaksi dimasukkan ke dalam sqlite database pada tabel transaction menggunakan fungsi insert_to_table->fungsi(<source_data>) 
+Kolom yang disimpan pada database
+no_id 			: nomer id (auto increment)
+nama_item		: nama barang yang dibeli
+jumlah_item		: jumlah barang yang dibeli
+harga			: harga barang 
+total_harga		: total harga (jumlah item * harga)
+diskon			: potongan harga
+harga_diskon	: harga item setelah diskon
+
+
+
+
+
+
