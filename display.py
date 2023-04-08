@@ -28,6 +28,28 @@ class Display:
               4. Update Item Price      | 8. Check Out
               """)
         
+        def operasi(): 
+            pilih = input(int("Pilih nomor: "))
+            if pilih == 1:
+                print("Silahkan menambahkan item anda: ")
+                ItemOperation.add_item()
+            elif pilih == 2:
+                print("Silahkan ubah nama item anda.")
+            elif pilih == 3:
+                print("Silahkan ubah kuantitas item anda.")
+            elif pilih == 6:
+                print("Berikut daftar belanja anda")
+                ItemOperation.check_order()
+            elif pilih == 8:
+                pass
+            else:
+                print("Pilihan anda di luar jangkauan")
+
+            
+            operasi()
+            
+        
+        
     def item_display():
         print(f"""
             ====================== ITEM LIST =======================                   
