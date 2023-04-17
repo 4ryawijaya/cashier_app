@@ -61,6 +61,12 @@ harga_diskon	: harga item setelah diskon
 
 
 
+link one: https://github.com/mhmdkanj/CashierApp/blob/master/cashier/
+link two: https://github.com/Nipiras/PizzaOrderingSystem/
+
+
+
+
 
 
 
