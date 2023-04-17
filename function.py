@@ -1,3 +1,5 @@
+import uuid
+
 class ItemManager:
     def __init__(self):
         self.items = {}
@@ -75,6 +77,7 @@ class ItemManager:
         # Display all input items and their total price
         print("Checkout:")
         for i, item in enumerate(self.items):
+            print("ID: ", uuid.uuid3())
             print("Item", i+1)
             print("Item name:", item['name'])
             print("Item price:", item['price'])
