@@ -1,8 +1,7 @@
 from datetime import datetime
-from function import ItemOperation, TransactionId
+from function import ItemOperation
 
 CURRENT_DATETIME = datetime.now().strftime("%Y-%m-%d")
-ID_TRANSAKSI = TransactionId.transaction_id
 
 class Display:
     def opening():
