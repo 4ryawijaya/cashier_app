@@ -13,11 +13,6 @@ class Display:
             Dapatkan diskon untuk pembelian dengan nominal tertentu.
             Selamat berbelanja!
               """)
-        
-    def transaction_display():
-        print(f"""
-            ID Transaksi: {ID_TRANSAKSI} 
-            """)
     
     def transaction_choice():
         print("""
